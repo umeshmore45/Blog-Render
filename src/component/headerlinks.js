@@ -1,0 +1,20 @@
+export const blogHeaderLinks = () => {
+  const nav = document.createElement("nav");
+  nav.classList.add("navigation");
+  const ul = document.createElement("ul");
+  ul.classList.add("navigation-Container");
+  const li1 = document.createElement("li");
+  li1.innerHTML = "Home";
+  li1.classList.add("links-item");
+  const li2 = document.createElement("li");
+  li2.innerHTML = "About";
+  li2.classList.add("links-item");
+  const li3 = document.createElement("li");
+  li3.innerHTML = "Contact";
+  li3.classList.add("links-item");
+  nav.appendChild(ul);
+  ul.appendChild(li1);
+  ul.appendChild(li2);
+  ul.appendChild(li3);
+  return nav;
+};
