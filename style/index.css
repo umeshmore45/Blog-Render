@@ -4,6 +4,76 @@ body {
   padding: 0;
   background-color: #f6f8f8;
 }
+/* toggle */
+
+.Toggle {
+  margin-top: 2.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dark {
+  background: #292c35;
+  color: white;
+}
+.light {
+  background-color: #fafafa;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; */
+  margin: 0;
+  padding: 0;
+  transition: background 0.2s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+label {
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  transform: scale(1.5);
+}
+
+.ball {
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + label .ball {
+  transform: translateX(29px);
+  background-color: #292c35;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+/* togglr  */
 
 #header-container {
   display: flex;
@@ -107,9 +177,15 @@ body {
   display: none;
 }
 @media (max-width: 767.98px) {
+  body {
+    margin: 0%;
+    padding: 0%;
+    max-width: 100%;
+  }
   #header-container {
     flex-direction: column;
     width: 100%;
+    height: 20vh;
     justify-content: center;
   }
   .navigation {
@@ -155,11 +231,34 @@ body {
     color: white;
     margin-top: 10%;
   }
+  /* toogle  */
+  .Toggle {
+    display: block;
+    margin-top: 0.5%;
+    margin-left: 45%;
+    width: 20%;
+    text-align-last: center;
+  }
+  label {
+    width: 40px;
+    height: 18px;
+    margin: 0%;
+  }
+  .ball {
+    top: 1px;
+    height: 15px;
+    width: 15px;
+  }
+  .checkbox:checked + label .ball {
+    transform: translateX(20px);
+    background-color: #292c35;
+  }
+
+  /* tooglr  */
   /* ham  */
   .navigation {
     display: none;
   }
-
   * {
     padding: 0;
     margin: 0;
@@ -174,8 +273,8 @@ body {
     position: absolute;
 
     z-index: 1000;
-    top: 20px;
-    right: 20px;
+    top: 18px;
+    right: 18px;
     width: 36px;
     height: 36px;
     border: none;

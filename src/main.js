@@ -4,6 +4,7 @@ import { blogContent } from "./component/divContent.js";
 import { blogRelatedLinks } from "./component/divrealted.js";
 import { findBlogById } from "./helper/findblogbyid.js";
 import { blogHeaderImg } from "./component/headerimg.js";
+import { toggleDark } from "./helper/toggledark.js";
 import { blogHeaderLinks } from "./component/headerlinks.js";
 import { hamContainer } from "./component/divham.js";
 import { blogFooterIcon } from "./component/footericon.js";
@@ -19,6 +20,7 @@ data.then((blog) => {
 });
 const blogHeaderdiv = document.getElementById("header-container");
 blogHeaderdiv.appendChild(blogHeaderImg());
+blogHeaderdiv.appendChild(toggleDark());
 blogHeaderdiv.appendChild(blogHeaderLinks());
 blogHeaderdiv.appendChild(hamContainer());
 
