@@ -87,12 +87,12 @@ label {
 }
 
 .logo-image {
-  width: 17%;
+  width: 30%;
   height: 10vh;
   /* border: 2px solid red; */
 }
 .logo-image img {
-  height: 80%;
+  height: 100%;
   padding-top: 5%;
   padding-left: 5%;
 }
@@ -193,7 +193,7 @@ label {
   }
 
   .logo-image {
-    width: 30%;
+    width: 40%;
   }
 
   .logo-image img {
@@ -271,10 +271,9 @@ label {
 
   .ham {
     position: absolute;
-
     z-index: 1000;
-    top: 18px;
-    right: 18px;
+    top: 34px;
+    right: 34px;
     width: 36px;
     height: 36px;
     border: none;
